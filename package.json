@@ -4,6 +4,16 @@
   "license": "MIT",
   "scripts": {},
   "private": true,
+  "packageManager": "pnpm@9.3.0",
+  "volta": {
+    "node": "20.16.0",
+    "pnpm": "9.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "dependencies": {
     "@nestjs/common": "^10.0.2",
     "@nestjs/core": "^10.0.2",
@@ -14,6 +24,12 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "husky": "8.0.3",
+    "@commitlint/cli": "17.7.1",
+    "@commitlint/config-conventional": "17.7.0",
+    "@commitlint/config-nx-scopes": "18.3.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "@nestjs/schematics": "^10.0.1",
     "@nestjs/testing": "^10.0.2",
     "@nx/eslint": "19.6.3",

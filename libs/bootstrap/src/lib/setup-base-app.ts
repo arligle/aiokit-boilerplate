@@ -2,7 +2,7 @@ import { Logger } from "@nestjs/common";
 import { NestFactory } from "@nestjs/core";
 
 
-export async function bootstrapBaseWebApp(module: any){
+export async function bootstrapBaseApp(module: any){
 const app = await NestFactory.create(module);
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);

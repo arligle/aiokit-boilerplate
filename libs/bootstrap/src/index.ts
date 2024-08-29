@@ -1,2 +1,2 @@
 
-export * from './lib/setup-web-app';
+export * from './lib/setup-base-app';

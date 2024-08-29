@@ -65,6 +65,18 @@
       ],
       "@aiokit/swagger-utils/*": [
         "libs/swagger-utils/src/*"
+      ],
+      "@aiokit/redis": [
+        "libs/redis/src"
+      ],
+      "@aiokit/redis/*": [
+        "libs/redis/src/*"
+      ],
+      "@aiokit/jobs": [
+        "libs/jobs/src"
+      ],
+      "@aiokit/jobs/*": [
+        "libs/jobs/src/*"
       ]
     }
   }

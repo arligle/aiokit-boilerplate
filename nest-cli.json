@@ -98,6 +98,24 @@
       "compilerOptions": {
         "tsConfigPath": "libs/typeorm/tsconfig.lib.json"
       }
+    },
+    "crypto": {
+      "type": "library",
+      "root": "libs/crypto",
+      "entryFile": "index",
+      "sourceRoot": "libs/crypto/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/crypto/tsconfig.lib.json"
+      }
+    },
+    "swagger-utils": {
+      "type": "library",
+      "root": "libs/swagger-utils",
+      "entryFile": "index",
+      "sourceRoot": "libs/swagger-utils/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/swagger-utils/tsconfig.lib.json"
+      }
     }
   },
   "compilerOptions": {

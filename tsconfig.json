@@ -53,6 +53,18 @@
       ],
       "@aiokit/typeorm/*": [
         "libs/typeorm/src/*"
+      ],
+      "@aiokit/crypto": [
+        "libs/crypto/src"
+      ],
+      "@aiokit/crypto/*": [
+        "libs/crypto/src/*"
+      ],
+      "@aiokit/swagger-utils": [
+        "libs/swagger-utils/src"
+      ],
+      "@aiokit/swagger-utils/*": [
+        "libs/swagger-utils/src/*"
       ]
     }
   }

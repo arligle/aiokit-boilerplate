@@ -3,6 +3,6 @@
  * This is only a minimal backend to get started.
  */
 import { MasterModule } from "./master.module";
-import { bootstrapBaseWebApp } from '@aiokit/bootstrap';
+import { bootstrapBaseApp } from '@aiokit/bootstrap';
 
-void bootstrapBaseWebApp(MasterModule);
+void bootstrapBaseApp(MasterModule);

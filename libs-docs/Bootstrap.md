@@ -12,14 +12,14 @@ Useful to do not repeat yourself everytime, and shouldn't be used outside Softki
 ## Installation
 
 ```bash
-yarn add @aiokit/bootstrap
+yarn add @softkit/bootstrap
 ```
 
 ## Usage in your main.ts
 
 ```typescript
 import { PlatformAppModule } from './your-app.module';
-import { bootstrapBaseWebApp } from '@aiokit/bootstrap';
+import { bootstrapBaseWebApp } from '@softkit/bootstrap';
 
 void bootstrapBaseWebApp(PlatformAppModule);
 ```
@@ -29,7 +29,7 @@ void bootstrapBaseWebApp(PlatformAppModule);
 ## Usage in tests (e2e)
 
 ```typescript
-import { bootstrapBaseWebApp } from '@aiokit/bootstrap';
+import { bootstrapBaseWebApp } from '@softkit/bootstrap';
 
 describe('auth e2e test', () => {
   let app: NestFastifyApplication;

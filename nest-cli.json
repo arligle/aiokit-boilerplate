@@ -8,6 +8,132 @@
       "compilerOptions": {
         "tsConfigPath": "libs/bootstrap/tsconfig.lib.json"
       }
+    },
+    "logger": {
+      "type": "library",
+      "root": "libs/logger",
+      "entryFile": "index",
+      "sourceRoot": "libs/logger/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/logger/tsconfig.lib.json"
+      }
+    },
+    "validation": {
+      "type": "library",
+      "root": "libs/validation",
+      "entryFile": "index",
+      "sourceRoot": "libs/validation/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/validation/tsconfig.lib.json"
+      }
+    },
+    "i18n": {
+      "type": "library",
+      "root": "libs/i18n",
+      "entryFile": "index",
+      "sourceRoot": "libs/i18n/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/i18n/tsconfig.lib.json"
+      }
+    },
+    "exceptions": {
+      "type": "library",
+      "root": "libs/exceptions",
+      "entryFile": "index",
+      "sourceRoot": "libs/exceptions/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/exceptions/tsconfig.lib.json"
+      }
+    },
+    "config": {
+      "type": "library",
+      "root": "libs/config",
+      "entryFile": "index",
+      "sourceRoot": "libs/config/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/config/tsconfig.lib.json"
+      }
+    },
+    "common-types": {
+      "type": "library",
+      "root": "libs/common-types",
+      "entryFile": "index",
+      "sourceRoot": "libs/common-types/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/common-types/tsconfig.lib.json"
+      }
+    },
+    "persistence-api": {
+      "type": "library",
+      "root": "libs/persistence-api",
+      "entryFile": "index",
+      "sourceRoot": "libs/persistence-api/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/persistence-api/tsconfig.lib.json"
+      }
+    },
+    "service-api": {
+      "type": "library",
+      "root": "libs/service-api",
+      "entryFile": "index",
+      "sourceRoot": "libs/service-api/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/service-api/tsconfig.lib.json"
+      }
+    },
+    "string-utils": {
+      "type": "library",
+      "root": "libs/string-utils",
+      "entryFile": "index",
+      "sourceRoot": "libs/string-utils/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/string-utils/tsconfig.lib.json"
+      }
+    },
+    "typeorm": {
+      "type": "library",
+      "root": "libs/typeorm",
+      "entryFile": "index",
+      "sourceRoot": "libs/typeorm/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/typeorm/tsconfig.lib.json"
+      }
+    },
+    "crypto": {
+      "type": "library",
+      "root": "libs/crypto",
+      "entryFile": "index",
+      "sourceRoot": "libs/crypto/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/crypto/tsconfig.lib.json"
+      }
+    },
+    "swagger-utils": {
+      "type": "library",
+      "root": "libs/swagger-utils",
+      "entryFile": "index",
+      "sourceRoot": "libs/swagger-utils/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/swagger-utils/tsconfig.lib.json"
+      }
+    },
+    "redis": {
+      "type": "library",
+      "root": "libs/redis",
+      "entryFile": "index",
+      "sourceRoot": "libs/redis/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/redis/tsconfig.lib.json"
+      }
+    },
+    "jobs": {
+      "type": "library",
+      "root": "libs/jobs",
+      "entryFile": "index",
+      "sourceRoot": "libs/jobs/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/jobs/tsconfig.lib.json"
+      }
     }
   },
   "compilerOptions": {

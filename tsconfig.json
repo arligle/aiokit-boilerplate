@@ -1,0 +1,83 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@aiokit/bootstrap": [
+        "libs/bootstrap/src/index.ts"
+      ],
+      "@aiokit/exceptions": [
+        "libs/exceptions/src/index.ts"
+      ],
+      "@aiokit/i18n": [
+        "libs/i18n/src/index.ts"
+      ],
+      "@aiokit/logger": [
+        "libs/logger/src/index.ts"
+      ],
+      "@aiokit/validation": [
+        "libs/validation/src/index.ts"
+      ],
+      "@aiokit/config": [
+        "libs/config/src"
+      ],
+      "@aiokit/config/*": [
+        "libs/config/src/*"
+      ],
+      "@aiokit/common-types": [
+        "libs/common-types/src"
+      ],
+      "@aiokit/common-types/*": [
+        "libs/common-types/src/*"
+      ],
+      "@aiokit/persistence-api": [
+        "libs/persistence-api/src"
+      ],
+      "@aiokit/persistence-api/*": [
+        "libs/persistence-api/src/*"
+      ],
+      "@aiokit/service-api": [
+        "libs/service-api/src"
+      ],
+      "@aiokit/service-api/*": [
+        "libs/service-api/src/*"
+      ],
+      "@aiokit/string-utils": [
+        "libs/string-utils/src"
+      ],
+      "@aiokit/string-utils/*": [
+        "libs/string-utils/src/*"
+      ],
+      "@aiokit/typeorm": [
+        "libs/typeorm/src"
+      ],
+      "@aiokit/typeorm/*": [
+        "libs/typeorm/src/*"
+      ],
+      "@aiokit/crypto": [
+        "libs/crypto/src"
+      ],
+      "@aiokit/crypto/*": [
+        "libs/crypto/src/*"
+      ],
+      "@aiokit/swagger-utils": [
+        "libs/swagger-utils/src"
+      ],
+      "@aiokit/swagger-utils/*": [
+        "libs/swagger-utils/src/*"
+      ],
+      "@aiokit/redis": [
+        "libs/redis/src"
+      ],
+      "@aiokit/redis/*": [
+        "libs/redis/src/*"
+      ],
+      "@aiokit/jobs": [
+        "libs/jobs/src"
+      ],
+      "@aiokit/jobs/*": [
+        "libs/jobs/src/*"
+      ]
+    }
+  }
+}

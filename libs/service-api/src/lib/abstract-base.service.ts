@@ -3,7 +3,9 @@ import { ClassConstructor } from 'class-transformer';
 import { ClassTransformOptions } from 'class-transformer/types/interfaces';
 import { Never } from '@aiokit/common-types';
 import { BaseEntity } from '@aiokit/persistence-api';
-
+/**
+ * @description 基础抽象服务类，提供基础的增删改查方法
+ */
 export abstract class AbstractBaseService<
   ENTITY extends BaseEntity,
   ID extends keyof ENTITY,

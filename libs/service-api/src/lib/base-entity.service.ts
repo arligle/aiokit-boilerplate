@@ -8,7 +8,9 @@ import { map } from '@aiokit/validation';
 import { Never } from '@aiokit/common-types';
 import { AbstractRepository, BaseEntity } from '@aiokit/persistence-api';
 import { ObjectNotFoundException } from '@aiokit/exceptions';
-
+/**
+ * @description 基础实体服务类，基础了抽象类AbstractRepository，提供基础的增删改查方法
+ */
 export class BaseEntityService<
   ENTITY extends BaseEntity,
   ID extends keyof ENTITY,

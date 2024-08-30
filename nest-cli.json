@@ -134,6 +134,33 @@
       "compilerOptions": {
         "tsConfigPath": "libs/jobs/tsconfig.lib.json"
       }
+    },
+    "health-check": {
+      "type": "library",
+      "root": "libs/health-check",
+      "entryFile": "index",
+      "sourceRoot": "libs/health-check/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/health-check/tsconfig.lib.json"
+      }
+    },
+    "auth": {
+      "type": "library",
+      "root": "libs/auth",
+      "entryFile": "index",
+      "sourceRoot": "libs/auth/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/auth/tsconfig.lib.json"
+      }
+    },
+    "server-http-client": {
+      "type": "library",
+      "root": "libs/server-http-client",
+      "entryFile": "index",
+      "sourceRoot": "libs/server-http-client/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/server-http-client/tsconfig.lib.json"
+      }
     }
   },
   "compilerOptions": {

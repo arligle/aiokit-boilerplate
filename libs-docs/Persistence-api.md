@@ -1,6 +1,6 @@
 # persistence-api
 
-This module contains the API for the persistence layer. It defines the interfaces that the persistence layer must implement.
+该模块包含持久层的API。它定义了持久层必须实现的接口。
 
-The main purpose is to provide a common interface for the persistence layer, so that the business layer can be decoupled from the actual implementation of the persistence layer 
-and we can easily switch between different implementations and even ORMs. 
+主要目的是为持久层提供通用接口，使得业务层能够与持久层的实际实现解耦
+我们可以轻松地在不同的实现甚至 ORM 之间切换。

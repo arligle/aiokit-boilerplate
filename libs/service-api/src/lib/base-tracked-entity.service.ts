@@ -8,8 +8,8 @@ import { BaseEntityService } from './base-entity.service';
 export class BaseTrackedEntityService<
   ENTITY extends BaseTrackedEntity,
   ID extends keyof ENTITY,
-  REPOSITORY extends ITrackedRepository<ENTITY, ID, unknown> &
-  AbstractRepository<
+  REPOSITORY extends ITrackedRepository<ENTITY, ID, unknown>
+  & AbstractRepository<
     ENTITY,
     ID,
     unknown,
@@ -18,13 +18,14 @@ export class BaseTrackedEntityService<
   >,
   FIELDS_REQUIRED_FOR_UPDATE extends keyof ENTITY = ID,
   AUTO_GENERATED_FIELDS extends keyof ENTITY = ID | keyof BaseTrackedEntity,
-> extends BaseEntityService<
-  ENTITY,
-  ID,
-  REPOSITORY,
-  FIELDS_REQUIRED_FOR_UPDATE,
-  AUTO_GENERATED_FIELDS
-> {
+>
+  extends BaseEntityService<
+    ENTITY,
+    ID,
+    REPOSITORY,
+    FIELDS_REQUIRED_FOR_UPDATE,
+    AUTO_GENERATED_FIELDS
+  > {
   constructor(repository: REPOSITORY) {
     super(repository);
   }

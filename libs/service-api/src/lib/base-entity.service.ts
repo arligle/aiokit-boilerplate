@@ -9,7 +9,7 @@ import { Never } from '@aiokit/common-types';
 import { AbstractRepository, BaseEntity } from '@aiokit/persistence-api';
 import { ObjectNotFoundException } from '@aiokit/exceptions';
 /**
- * @description 基础实体服务类，基础了抽象类AbstractRepository，提供基础的增删改查方法
+ * @description 基础实体服务类，基础了抽象类AbstractBaseService，提供基础的增删改查方法
  */
 export class BaseEntityService<
   ENTITY extends BaseEntity,
@@ -17,18 +17,19 @@ export class BaseEntityService<
   REPOSITORY extends AbstractRepository<
     ENTITY,
     ID,
-    unknown,
+    unknown, // FIND_OPTIONS
     FIELDS_REQUIRED_FOR_UPDATE,
     AUTO_GENERATED_FIELDS
   >,
   FIELDS_REQUIRED_FOR_UPDATE extends keyof ENTITY = ID,
   AUTO_GENERATED_FIELDS extends keyof ENTITY = ID,
-> extends AbstractBaseService<
-  ENTITY,
-  ID,
-  FIELDS_REQUIRED_FOR_UPDATE,
-  AUTO_GENERATED_FIELDS
-> {
+>
+  extends AbstractBaseService<
+    ENTITY,
+    ID,
+    FIELDS_REQUIRED_FOR_UPDATE,
+    AUTO_GENERATED_FIELDS
+  > {
   constructor(protected readonly repository: REPOSITORY) {
     super();
   }

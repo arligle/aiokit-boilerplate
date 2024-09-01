@@ -1,5 +1,7 @@
 {
   "files.trimTrailingWhitespace": true,
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "pieces.cloudCapabilities": "Blended",
+  "pieces.telemetry": true
 }

@@ -11,6 +11,9 @@ importers:
       '@anchan828/nest-redlock':
         specifier: ^0.2.39
         version: 0.2.39
+      '@faker-js/faker':
+        specifier: ^8.4.1
+        version: 8.4.1
       '@fastify/helmet':
         specifier: ^11.1.1
         version: 11.1.1
@@ -104,6 +107,9 @@ importers:
       passport-jwt:
         specifier: ^4.0.1
         version: 4.0.1
+      passport-saml:
+        specifier: ^3.2.4
+        version: 3.2.4
       reflect-metadata:
         specifier: ^0.1.13
         version: 0.1.14
@@ -2253,6 +2259,10 @@ packages:
     peerDependenciesMeta:
       webpack-dev-server:
         optional: true
+
+  '@xmldom/xmldom@0.7.13':
+    resolution: {integrity: sha512-lm2GW5PkosIzccsaZIz7tp8cPADSIlIHWDFTR1N0SzfinhhYgeIQjFMz4rYzanCScr3DqQLeomUDArp6MWKm+g==}
+    engines: {node: '>=10.0.0'}
 
   '@xtuc/ieee754@1.2.0':
     resolution: {integrity: sha512-DX8nKgqcGwsc0eJSqYt5lwP4DH5FlHnmuWWBRy7X0NcaGR0ZtuyeESgMwTYVEtxmsNGY+qit4QYT/MIYTOTPeA==}
@@ -5097,6 +5107,11 @@ packages:
   passport-jwt@4.0.1:
     resolution: {integrity: sha512-UCKMDYhNuGOBE9/9Ycuoyh7vP6jpeTp/+sfMJl7nLff/t6dps+iaeE0hhNkKN8/HZHcJ7lCdOyDxHdDoxoSvdQ==}
 
+  passport-saml@3.2.4:
+    resolution: {integrity: sha512-JSgkFXeaexLNQh1RrOvJAgjLnZzH/S3HbX/mWAk+i7aulnjqUe7WKnPl1NPnJWqP7Dqsv0I2Xm6KIFHkftk0HA==}
+    engines: {node: '>= 12'}
+    deprecated: For versions >= 4, please use scopped package @node-saml/passport-saml
+
   passport-strategy@1.0.0:
     resolution: {integrity: sha512-CB97UUvDKJde2V0KDWWB3lyf6PC3FaZP7YxZ2G8OAtn9p4HI9j9JLP9qjOGZFvyl8uwNT8qM+hGnz/n16NI7oA==}
     engines: {node: '>= 0.4.0'}
@@ -6612,6 +6627,30 @@ packages:
         optional: true
       utf-8-validate:
         optional: true
+
+  xml-crypto@2.1.5:
+    resolution: {integrity: sha512-xOSJmGFm+BTXmaPYk8pPV3duKo6hJuZ5niN4uMzoNcTlwYs0jAu/N3qY+ud9MhE4N7eMRuC1ayC7Yhmb7MmAWg==}
+    engines: {node: '>=0.4.0'}
+
+  xml-encryption@2.0.0:
+    resolution: {integrity: sha512-4Av83DdvAgUQQMfi/w8G01aJshbEZP9ewjmZMpS9t3H+OCZBDvyK4GJPnHGfWiXlArnPbYvR58JB9qF2x9Ds+Q==}
+    engines: {node: '>=12'}
+
+  xml2js@0.4.23:
+    resolution: {integrity: sha512-ySPiMjM0+pLDftHgXY4By0uswI3SPKLDw/i3UXbnO8M/p28zqexCUoPmQFrYD+/1BzhGJSs2i1ERWKJAtiLrug==}
+    engines: {node: '>=4.0.0'}
+
+  xmlbuilder@11.0.1:
+    resolution: {integrity: sha512-fDlsI/kFEx7gLvbecc0/ohLG50fugQp8ryHzMTuW9vSa1GJ0XYWKnhsUx7oie3G98+r56aTQIUB4kht42R3JvA==}
+    engines: {node: '>=4.0'}
+
+  xmlbuilder@15.1.1:
+    resolution: {integrity: sha512-yMqGBqtXyeN1e3TGYvgNgDVZ3j84W4cwkOXQswghol6APgZWaff9lnbvN7MHYJOiXsvGPXtjTYJEiC9J2wv9Eg==}
+    engines: {node: '>=8.0'}
+
+  xpath@0.0.32:
+    resolution: {integrity: sha512-rxMJhSIoiO8vXcWvSifKqhvV96GjiD5wYb8/QHdoRyQvraTpp4IEv944nhGausZZ3u7dhQXteZuZbaqfpB7uYw==}
+    engines: {node: '>=0.6.0'}
 
   xtend@4.0.2:
     resolution: {integrity: sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==}
@@ -9806,6 +9845,8 @@ snapshots:
     dependencies:
       webpack: 5.94.0(@swc/core@1.5.29(@swc/helpers@0.5.12))(webpack-cli@5.1.4)
       webpack-cli: 5.1.4(webpack@5.94.0)
+
+  '@xmldom/xmldom@0.7.13': {}
 
   '@xtuc/ieee754@1.2.0': {}
 
@@ -13081,6 +13122,18 @@ snapshots:
       jsonwebtoken: 9.0.2
       passport-strategy: 1.0.0
 
+  passport-saml@3.2.4:
+    dependencies:
+      '@xmldom/xmldom': 0.7.13
+      debug: 4.3.6
+      passport-strategy: 1.0.0
+      xml-crypto: 2.1.5
+      xml-encryption: 2.0.0
+      xml2js: 0.4.23
+      xmlbuilder: 15.1.1
+    transitivePeerDependencies:
+      - supports-color
+
   passport-strategy@1.0.0: {}
 
   passport@0.7.0:
@@ -13650,8 +13703,7 @@ snapshots:
 
   sax@1.2.4: {}
 
-  sax@1.4.1:
-    optional: true
+  sax@1.4.1: {}
 
   schema-utils@3.3.0:
     dependencies:
@@ -14563,6 +14615,28 @@ snapshots:
   ws@8.17.1: {}
 
   ws@8.18.0: {}
+
+  xml-crypto@2.1.5:
+    dependencies:
+      '@xmldom/xmldom': 0.7.13
+      xpath: 0.0.32
+
+  xml-encryption@2.0.0:
+    dependencies:
+      '@xmldom/xmldom': 0.7.13
+      escape-html: 1.0.3
+      xpath: 0.0.32
+
+  xml2js@0.4.23:
+    dependencies:
+      sax: 1.4.1
+      xmlbuilder: 11.0.1
+
+  xmlbuilder@11.0.1: {}
+
+  xmlbuilder@15.1.1: {}
+
+  xpath@0.0.32: {}
 
   xtend@4.0.2:
     optional: true

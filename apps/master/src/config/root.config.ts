@@ -1,6 +1,5 @@
 import { Type } from 'class-transformer';
 import { ValidateNested } from 'class-validator';
-
 import { SamlConfig } from './saml.config';
 import { LoggerConfig } from '@aiokit/logger';
 import { AuthConfig } from '@aiokit/auth';
@@ -9,7 +8,9 @@ import { I18Config } from '@aiokit/i18n';
 import { DbConfig } from '@aiokit/typeorm';
 import { HealthConfig } from '@aiokit/health-check';
 import { AppConfig } from '@aiokit/bootstrap';
-
+/**
+ * @description 集中管理所有配置，通过这个类定义了应用程序的配置架构 rootSchemaClass
+ */
 export default class RootConfig {
   @Type(() => LoggerConfig)
   @ValidateNested()

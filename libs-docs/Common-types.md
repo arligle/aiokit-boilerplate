@@ -1,8 +1,8 @@
 # Common Types Library
 
-This library provides a set of general types and interfaces for the Softkit ecosystem.
+该库为 Softkit 生态系统提供了一组通用类型和接口。
 
-Used mostly in auto-generated code.
+主要用于自动生成的代码中。
 
 ## Installation
 

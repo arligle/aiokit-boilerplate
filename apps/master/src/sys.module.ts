@@ -26,3 +26,5 @@ import { setupI18NModule } from '@aiokit/i18n';
   ],
 })
 export class SysModule { }
+
+// Path: apps/master/src/sys/sys.controller.ts

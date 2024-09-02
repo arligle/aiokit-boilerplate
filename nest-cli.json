@@ -161,6 +161,15 @@
       "compilerOptions": {
         "tsConfigPath": "libs/server-http-client/tsconfig.lib.json"
       }
+    },
+    "async-storage": {
+      "type": "library",
+      "root": "libs/async-storage",
+      "entryFile": "index",
+      "sourceRoot": "libs/async-storage/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/async-storage/tsconfig.lib.json"
+      }
     }
   },
   "compilerOptions": {

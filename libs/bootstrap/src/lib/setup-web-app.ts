@@ -43,9 +43,7 @@ import type { TestingModule } from '@nestjs/testing';
 
 export function buildFastifyAdapter() {
   return new FastifyAdapter({
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     genReqId: (req: { headers: { [x: string]: any } }) => {
-      // eslint-disable-next-line security/detect-object-injection
       const requestId = req.headers[REQUEST_ID_HEADER];
       return requestId || generateRandomId();
     },
@@ -72,9 +70,7 @@ export function setupGlobalFilters(
 }
 
 export async function createNestWebApp(
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   module: any | TestingModule,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   originalModule?: any,
 ) {
   const isTestingModule = module?.constructor?.name === 'TestingModule';
@@ -102,8 +98,6 @@ export function applyExpressCompatibilityRecommendations(
   // this is a recommendation from fastify to improve compatibility with express middlewares
   fastifyInstance
     .addHook('onRequest', async (req) => {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
       req.socket['encrypted'] = process.env.NODE_ENV === 'production';
     })
     .decorateReply(
@@ -157,9 +151,7 @@ export async function runDatabaseSeeders(
 }
 
 export async function bootstrapBaseWebApp(
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   module: any | TestingModule,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   originalModule?: any,
 ) {
   // todo wait for the pr in this package to be merged

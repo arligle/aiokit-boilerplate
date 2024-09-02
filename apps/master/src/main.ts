@@ -14,9 +14,13 @@ import { fastifyHelmet } from '@fastify/helmet';
 import { I18nValidationPipe, } from '@aiokit/i18n';
 import { DEFAULT_VALIDATION_OPTIONS } from '@aiokit/validation';
 import { SysModule } from "./sys.module";
+import { initializeTransactionalContext } from "typeorm-transactional";
 
 // const { CLUSTERING } = process.env;
 const bootstrap = async () => {
+
+  // 初始化事务上下文存储驱动。需要在应用程序启动之前调用这个方法
+  initializeTransactionalContext();
   const app = await NestFactory.create<NestFastifyApplication>(
     SysModule,
     buildFastifyAdapter(),

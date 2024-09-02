@@ -3,6 +3,10 @@
 This library provides a set of general services, methods and utilities for bootstrapping the application.
 It's configuring default interceptors, swagger, http server, security, etc...
 
+#  启动器
+
+
+
 ---
 
 Useful to do not repeat yourself everytime, and shouldn't be used outside Softkit ecosystem

@@ -18,6 +18,7 @@
     "@anchan828/nest-redlock": "^0.2.39",
     "@faker-js/faker": "^8.4.1",
     "@fastify/helmet": "^11.1.1",
+    "@fastify/static": "^7.0.4",
     "@grpc/grpc-js": "^1.11.1",
     "@nestjs/bullmq": "^10.2.1",
     "@nestjs/common": "^10.0.2",

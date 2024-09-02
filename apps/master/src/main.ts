@@ -6,6 +6,7 @@ import {
   applyExpressCompatibilityRecommendations,
   setupGlobalFilters,
   setupGlobalInterceptors,
+  callOrUndefinedIfException,
 } from '@aiokit/bootstrap';
 import { Logger } from "nestjs-pino";
 // import { clusterize } from '@aiokit/utils';
@@ -15,7 +16,7 @@ import { I18nValidationPipe, } from '@aiokit/i18n';
 import { DEFAULT_VALIDATION_OPTIONS } from '@aiokit/validation';
 import { SysModule } from "./sys.module";
 import { initializeTransactionalContext } from "typeorm-transactional";
-
+import { setupSwagger, SwaggerConfig } from '@aiokit/swagger-utils';
 // const { CLUSTERING } = process.env;
 const bootstrap = async () => {
 
@@ -72,7 +73,29 @@ const bootstrap = async () => {
   setupGlobalInterceptors(app);
   // TODO: 其他的初始化配置操作
   // initialize(app);
+
+  // const appPrefix = 'prefix';
+  const swaggerConfig = callOrUndefinedIfException(() =>
+    app.get(SwaggerConfig),
+  );
+
+
   const appConfig = app.get(AppConfig);
+  if (swaggerConfig instanceof SwaggerConfig) {
+    const swaggerSetup = setupSwagger(swaggerConfig, app, appConfig.prefix);
+    const swaggerPath = `${appConfig.prefix}${swaggerConfig.swaggerPath}`;
+
+    if (swaggerSetup) {
+      logger.log(`Swagger is listening on ${swaggerPath}`);
+    } else {
+      logger.log(`Swagger is disabled by config, skipping...`);
+    }
+  } else {
+    logger.debug(
+      `SwaggerConfig instance is not provided so swagger turned off by default, skipping... Details: %o`,
+      swaggerConfig,
+    );
+  }
 
   // 默认情况下，Fastify 仅侦听 localhost，因此我们应该指定“0.0.0.0”
   await app.listen(appConfig.port, '0.0.0.0', async () => {

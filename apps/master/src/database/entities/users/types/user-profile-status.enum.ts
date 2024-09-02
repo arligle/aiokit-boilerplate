@@ -1,0 +1,11 @@
+/**
+用户个人资料状态：
+ACTIVE - 激活状态，
+WAITING_FOR_EMAIL_APPROVAL - 等待邮箱验证状态，
+DEACTIVATED - 停用状态
+*/
+export enum UserProfileStatus {
+  ACTIVE = 'ACTIVE',
+  WAITING_FOR_EMAIL_APPROVAL = 'WAITING_FOR_EMAIL_APPROVAL',
+  DEACTIVATED = 'DEACTIVATED',
+}

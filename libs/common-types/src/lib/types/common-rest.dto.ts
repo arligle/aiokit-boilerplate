@@ -4,7 +4,9 @@ import {
   IsIntegerStringCombinedLocalized,
   IsNotEmptyLocalized,
 } from '@aiokit/validation';
-
+/**
+ * @description 向用户显示有关实体创建的一般友好消息
+ */
 export class SimpleResponseForCreatedEntityWithMessage<ID> {
   @ApiProperty({
     description:
@@ -15,7 +17,9 @@ export class SimpleResponseForCreatedEntityWithMessage<ID> {
     id: ID;
   };
 }
-
+/**
+ * @description Entity id, uuid v4 format
+ */
 export class IdParamUUID {
   @ApiProperty({
     description: 'Entity id, uuid v4 format',
@@ -25,7 +29,9 @@ export class IdParamUUID {
   @IsUUIDLocalized()
   id!: string;
 }
-
+/**
+ * @description 实体的版本号
+ */
 export class VersionNumberParam {
   @ApiProperty({
     description: 'Version number of entity',

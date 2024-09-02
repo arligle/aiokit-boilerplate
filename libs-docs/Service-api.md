@@ -1,8 +1,9 @@
 # Typeorm Service Library
+## service-api
 
-This library has some useful utilities for @aiokit/typeorm library, that expose useful base services to use in your application.
+该库为 @aiokit/typeorm 库提供了一些有用的实用程序，这些实用程序公开了可在您的应用程序中使用的有用的基础服务。
 
-This library is also throwing standard exceptions from @aiokit/exceptions library. So interceptors can handle everything properly.
+该库还从 @aiokit/exceptions 库抛出标准异常。所以拦截器可以正确处理一切。
 
 ## Installation
 
@@ -12,7 +13,7 @@ yarn add @aiokit/service-api
 
 ## Examples:
 
-- `BaseEntityService` - it has basic methods for creating, finding, updating, archiving, deleting entities. Simple CRUD based operations, and you can also extend it with your own methods.
+- `BaseEntityService` - 它具有创建、查找、更新、归档、删除实体的基本方法。简单的基于CRUD的操作，您也可以用自己的方法扩展它。
 
 ```typescript
 import { Injectable } from '@nestjs/common';
@@ -39,7 +40,7 @@ export class CustomUserRoleService extends BaseEntityService<CustomUserRole, Cus
 }
 ```
 
-- `BaseTenantEntityService` - it has basic methods for creating, finding, updating, archiving, deleting tenant base entities. Simple CRUD based operations, and you can also extend it with your own methods.
+- `BaseTenantEntityService` - 它具有创建、查找、更新、归档、删除租户基础实体的基本方法。简单的基于CRUD的操作，您也可以用自己的方法扩展它。
 
 ```typescript
 @Injectable()
@@ -52,10 +53,9 @@ export class CustomUserRoleTenantService extends BaseTenantEntityService<CustomU
 
 Tip:
 
-Each of these services has additional parameter in generics, after repository type, that is used for excluding auto generated types,
-to keep service type safe and do not annoy you with type errors.
+这些服务中的每一个在存储库类型之后的泛型中都有附加参数，用于排除自动生成的类型，确保服务类型安全并且不会因为类型错误而烦恼。
 
-Example (_This will exclude 5 fields from base methods and types, because it will be populated by subscribers_):
+Example (_这将从基本方法和类型中排除 5 个字段，因为它将由订阅者填充_):
 
 ```typescript
 @Injectable()

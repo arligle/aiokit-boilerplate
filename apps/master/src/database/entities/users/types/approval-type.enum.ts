@@ -1,0 +1,8 @@
+/**
+审批类型
+*/
+export enum ApprovalType {
+  REGISTRATION = 'REGISTRATION',
+  PASSWORD_RESET = 'PASSWORD_RESET',
+  EMAIL_CHANGE = 'EMAIL_CHANGE',
+}

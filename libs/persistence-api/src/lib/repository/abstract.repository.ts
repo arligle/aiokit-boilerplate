@@ -2,7 +2,10 @@ import { PaginateConfig, Paginated, PaginateQuery } from 'nestjs-paginate';
 import { Never } from '@aiokit/common-types';
 import { LimitOptions } from './vo/limit-options.interface';
 import { BaseEntity } from '../entity/base.entity';
-
+/**
+ * @description 以泛型抽象类的形式定义了一个Repository的模版
+ * 具体的Repository需要继承这个抽象类，并满足这些泛型参数的约束
+ */
 export abstract class AbstractRepository<
   ENTITY extends BaseEntity,
   ID extends keyof ENTITY,

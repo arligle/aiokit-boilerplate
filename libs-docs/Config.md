@@ -54,26 +54,26 @@ export class YourAppModule {}
 ## This wrapper has a few additions:
 
 - It has *PROFILES* feature, so you can have different configs for different environments.
-  - NESTJS_PROFILES - is an environment variable, which is used to define which profile to use
-  - By default, it's no profiles and only main provided file name will be used
-  - The order of profiles is important it defines how to merge configs in case if there will be any conflicts
+  - NESTJS_PROFILES -是一个环境变量，用于定义要使用的配置文件
+  - 默认情况下，它没有配置文件，仅使用主要提供的文件名
+  - 配置文件的顺序很重要，它定义了如何合并配置，以防出现任何冲突
   - Example:
-    - `NESTJS_PROFILES=dev,local` - will use `.env-dev.yaml` and `.env-local.yaml` files and base `.env.yaml`
-    - `NESTJS_PROFILES=dev` - will use only `.env-dev.yaml` file and base `.env.yaml`
-  - By default, we recommend to set in jest config a test profile. In jest.preset.js
+    - `NESTJS_PROFILES=dev,local` -将使用 `.env-dev.yaml` 和 `.env-local.yaml` 文件以及基础 `.env.yaml`
+    - `NESTJS_PROFILES=dev` -将仅使用 `.env-dev.yaml` 文件和基础 `.env.yaml`
+  - 默认情况下，我们建议在 jest config 中设置测试配置文件。在 jest.preset.js 中
   ```javascript
      process.env.NESTJS_PROFILES = 'test';
   ```
-- Another adjustments is adding a general alias for RootConfig class, so we can reuse it across various apps in the same way.
-  - To inject a config in another library you just need to use common token `ROOT_CONFIG_ALIAS_TOKEN`
-  - We leverage NestJS DI use existing feature to provide a config in a common way
+- 另一个调整是为 RootConfig 类添加通用别名，这样我们就可以以相同的方式在各种应用程序中重用它。
+  - 要在另一个库中注入配置，您只需要使用通用令牌“ROOT_CONFIG_ALIAS_TOKEN”
+  - 我们利用 NestJS DI 使用现有功能以通用方式提供配置
       ```typescript
       {
         provide: ROOT_CONFIG_ALIAS_TOKEN,
         useExisting: rootSchemaClass,
       }
       ```
-  - In your library you can expect this Provider be available globally, and you can force this config to implement your interface. So you will be able to decouple application very well, and declarative define what config you need to use in your library.
+  - 在您的库中，您可以期望此提供程序在全局范围内可用，并且您可以强制此配置来实现您的接口。因此，您将能够很好地解耦应用程序，并声明性定义您需要在库中使用的配置。
     - Example in your library:
       ```typescript
       import { Inject, Injectable } from '@nestjs/common';

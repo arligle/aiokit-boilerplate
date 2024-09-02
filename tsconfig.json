@@ -77,6 +77,24 @@
       ],
       "@aiokit/jobs/*": [
         "libs/jobs/src/*"
+      ],
+      "@aiokit/health-check": [
+        "libs/health-check/src"
+      ],
+      "@aiokit/health-check/*": [
+        "libs/health-check/src/*"
+      ],
+      "@aiokit/auth": [
+        "libs/auth/src"
+      ],
+      "@aiokit/auth/*": [
+        "libs/auth/src/*"
+      ],
+      "@aiokit/server-http-client": [
+        "libs/server-http-client/src"
+      ],
+      "@aiokit/server-http-client/*": [
+        "libs/server-http-client/src/*"
       ]
     }
   }

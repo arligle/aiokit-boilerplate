@@ -50,7 +50,6 @@ export abstract class BaseTypeormTrackedEntityRepository<
   async restore(id: ENTITY[ID] | Array<ENTITY[ID]>): Promise<boolean> {
     const result = await this.updateByQuery(
       {
-        // eslint-disable-next-line unicorn/no-null
         deletedAt: null,
       } as unknown as Partial<ENTITY>,
       {

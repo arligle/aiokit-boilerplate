@@ -1,15 +1,11 @@
 # Bootstrap Library
 
-This library provides a set of general services, methods and utilities for bootstrapping the application.
-It's configuring default interceptors, swagger, http server, security, etc...
-
-#  启动器
-
-
+该库提供了一组用于引导应用程序的通用服务、方法和实用程序。
+它正在配置默认拦截器、swagger、http 服务器、安全性等......
 
 ---
 
-Useful to do not repeat yourself everytime, and shouldn't be used outside Softkit ecosystem
+有助于避免每次重复，并且不应在 Softkit 生态系统之外使用
 
 ---
 

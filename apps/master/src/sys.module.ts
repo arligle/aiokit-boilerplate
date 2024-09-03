@@ -7,6 +7,10 @@ import path from 'path';
 import RootConfig from './config/root.config';
 import { Logger } from 'nestjs-pino';
 import { setupI18NModule } from '@aiokit/i18n';
+import { setupClsModule } from '@aiokit/async-storage';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import * as Entities from './database/entities';
+import { setupTypeormModule } from '@aiokit/typeorm';
 
 @Module({
   imports: [
@@ -17,7 +21,9 @@ import { setupI18NModule } from '@aiokit/i18n';
       RootConfig
     ),
     setupI18NModule(path.join(__dirname, '../../../')),
-
+    setupClsModule(),
+    setupTypeormModule(),
+    TypeOrmModule.forFeature(Object.values(Entities)),
   ],
   controllers: [SysController],
   providers: [
@@ -27,4 +33,3 @@ import { setupI18NModule } from '@aiokit/i18n';
 })
 export class SysModule { }
 
-// Path: apps/master/src/sys/sys.controller.ts

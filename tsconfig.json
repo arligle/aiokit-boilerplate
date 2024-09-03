@@ -95,6 +95,12 @@
       ],
       "@aiokit/server-http-client/*": [
         "libs/server-http-client/src/*"
+      ],
+      "@aiokit/async-storage": [
+        "libs/async-storage/src"
+      ],
+      "@aiokit/async-storage/*": [
+        "libs/async-storage/src/*"
       ]
     }
   }

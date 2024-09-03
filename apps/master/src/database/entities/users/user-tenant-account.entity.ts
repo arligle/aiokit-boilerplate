@@ -43,8 +43,8 @@ export class UserTenantAccount extends BaseTenantEntityHelper {
   @Column({
     type: 'enum',
     enum: UserAccountStatus,
+    nullable: false,
   })
-  @Column({ nullable: false })
   @Expose()
   @IsStringEnumLocalized(UserAccountStatus)
   userStatus!: UserAccountStatus;

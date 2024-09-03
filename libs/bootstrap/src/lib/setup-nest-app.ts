@@ -14,6 +14,7 @@ import {
   I18nValidationExceptionFilter,
 } from '@aiokit/i18n';
 import { LoggerErrorInterceptor } from "nestjs-pino";
+import { generateRandomId } from "@aiokit/crypto";
 /*
 TODO: 定义了一组方法函数，使用 NestJS 和 Fastify 构建和初始化配置 Web 应用程序。
 */
@@ -24,12 +25,13 @@ TODO: 定义了一组方法函数，使用 NestJS 和 Fastify 构建和初始化
  * 确保每个请求都有唯一的 ID，并限制了请求体的大小。
  */
 export function buildFastifyAdapter() {
+  const REQUEST_ID_HEADER = 'x-request-id'; // 请求 ID 的 HTTP 头名称
   return new FastifyAdapter({
-    // TODO:
-    // genReqId: (req: { headers: { [x: string]: any } }) => {
-    //   const requestId = req.headers[REQUEST_ID_HEADER];
-    //   return requestId || generateRandomId();
-    // },
+    // TODO: 生成请求 ID,这对于管理存储状态很重要，因为它允许我们跟踪请求的生命周期
+    genReqId: (req: { headers: { [x: string]: any } }) => {
+      const requestId = req.headers[REQUEST_ID_HEADER];
+      return requestId || generateRandomId();
+    },
     bodyLimit: 10_485_760,
   });
 }
@@ -42,8 +44,6 @@ export function applyExpressCompatibilityRecommendations(
   // 这是 fastify 的建议，旨在提高与 Express 中间件的兼容性
   fastifyInstance
     .addHook('onRequest', async (req) => {
-      // @ts-ignore
-      // biome-ignore lint/complexity/useLiteralKeys: <explanation>
       req.socket['encrypted'] = process.env.NODE_ENV === 'production';
     })
     .decorateReply(
